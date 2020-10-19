@@ -1,0 +1,951 @@
+{
+  "intents": [
+    {
+      "intent": "Enquiry",
+      "examples": [
+        {
+          "text": "Can you provide me with the list of essential products in the store"
+        },
+        {
+          "text": "can you show good deals or offers?"
+        },
+        {
+          "text": "Do have any offers?"
+        },
+        {
+          "text": "Do you provide discounts?"
+        },
+        {
+          "text": "give me list of the essential products avialable in the store"
+        },
+        {
+          "text": "Is there any discount on essential products available?"
+        },
+        {
+          "text": "please give me good discount"
+        },
+        {
+          "text": "please show me today's offers?"
+        },
+        {
+          "text": "products available at store...??"
+        },
+        {
+          "text": "what all essential products are available?"
+        },
+        {
+          "text": "what are the offers available?"
+        },
+        {
+          "text": "Which are the fresh vegitables are available today?"
+        }
+      ],
+      "description": "Chat bot will be able to show all essential products of the store, offers offered by stores and price of vegitables"
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "hiee"
+        }
+      ],
+      "description": "Chat bot will be aple to greet customers "
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "can you please the order?"
+        },
+        {
+          "text": "I want to buy veggies"
+        },
+        {
+          "text": "i want to order fresh vegitables"
+        },
+        {
+          "text": "I want to place order for essential products"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Essential products",
+          "synonyms": [
+            "essential items"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fresh vegitables",
+          "synonyms": [
+            "fresh veggies"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "deals",
+            "discount"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "EssentialProducts",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bread",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "brinjal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "butter",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "cauliflower",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "dal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "eggs",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Milk",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "peanut oil",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pumkin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "rice",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "salt",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "spinach",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sugar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "wheat flour",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "FreshVegitables",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Beans",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Brinjal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "cabbage",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "cauliflower",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pumkin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "spinach",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "GA",
+            "Gud After"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "ge",
+            "gud evng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "GM",
+            "gud mrg"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hi",
+          "synonyms": [
+            "hi",
+            "hiii"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy",
+            "purchase"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "COD",
+          "synonyms": [
+            "Cash on delivery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "PAYTM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_5_1602847972177",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_5_1602847972177",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1602848356267",
+      "previous_sibling": "node_7_1602849970774"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1602849282115",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_1_1602849282126"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Can you provide me with the products you want? you can check product list for that"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1602848357230",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1602848357277",
+      "previous_sibling": "handler_6_1602848357277"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1602849358934",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_3_1602849358944"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1602848357230",
+      "context": {
+        "EssentialProducts": "@EssentialProducts"
+      },
+      "conditions": "@EssentialProducts",
+      "event_name": "input",
+      "dialog_node": "handler_6_1602848357277"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "how much you want to buy?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1602849282115",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1602849282126",
+      "previous_sibling": "handler_1_1602849282126"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "we accepts COD, Card, UPI and paytm , what is your mode of payment?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1602849358934",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1602849358944",
+      "previous_sibling": "handler_3_1602849358944"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greetings || @Greetings",
+      "dialog_node": "node_5_1602842188921",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "frame",
+      "title": "order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank for, your order of  $number of $EssentialProducts is placed. Please pay using $payment. your recipt is sent to $email"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#order && @order:order",
+      "digress_in": "returns",
+      "dialog_node": "node_5_1602847972177",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_9_1602844212212",
+      "digress_out_slots": "allow_returning"
+    },
+    {
+      "type": "standard",
+      "title": "FreshVegitables",
+      "parent": "node_9_1602844212212",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@FreshVegitables",
+      "dialog_node": "node_7_1602846865003"
+    },
+    {
+      "type": "standard",
+      "title": "Deleting Context",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ],
+        " Deleted": "<?context.remove('number')?><?context.remove('FreshVegitable')?><?context.remove('payment')?><?context.remove('email')?"
+      },
+      "parent": "node_5_1602847972177",
+      "conditions": "true",
+      "dialog_node": "node_7_1602849970774"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for giving your mail id, your mail id $email will be used for future reference"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_8_1602852062604"
+    },
+    {
+      "type": "standard",
+      "title": "Enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Enquiry || @Enquiry",
+      "digress_in": "returns",
+      "dialog_node": "node_9_1602844212212",
+      "digress_out": "allow_all_never_return",
+      "previous_sibling": "node_5_1602842188921"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 80 per Kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602846865003",
+      "conditions": "@FreshVegitables:Pumkin",
+      "dialog_node": "response_10_1602847101265",
+      "previous_sibling": "response_4_1602847057291"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs rs 35 per pair"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602846865003",
+      "conditions": "@FreshVegitables:spinach",
+      "dialog_node": "response_10_1602847163961",
+      "previous_sibling": "response_2_1602847135287"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602842188921",
+      "conditions": "@Greetings:Hi",
+      "dialog_node": "response_1_1602842751859",
+      "previous_sibling": "response_9_1602842724660"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Essential Product list",
+            "source": "https://pbs.twimg.com/media/EWcz0jmU8AAakWq?format=jpg&name=large",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_9_1602844212212",
+      "conditions": "@Enquiry:(Essential products)",
+      "dialog_node": "response_1_1602844349363",
+      "previous_sibling": "node_7_1602846865003"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 30 per kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602846865003",
+      "conditions": "@FreshVegitables:cabbage",
+      "dialog_node": "response_2_1602847135287",
+      "previous_sibling": "response_10_1602847101265"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 100 per Kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602846865003",
+      "conditions": "@FreshVegitables:Beans",
+      "dialog_node": "response_2_1602847196053",
+      "previous_sibling": "response_10_1602847163961"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Fresh Vegitables",
+            "options": [
+              {
+                "label": "Beans",
+                "value": {
+                  "input": {
+                    "text": "Beans"
+                  }
+                }
+              },
+              {
+                "label": "Pumkin",
+                "value": {
+                  "input": {
+                    "text": "Pumkin"
+                  }
+                }
+              },
+              {
+                "label": "Cauliflower",
+                "value": {
+                  "input": {
+                    "text": "Cauliflower"
+                  }
+                }
+              },
+              {
+                "label": "Brinjal ",
+                "value": {
+                  "input": {
+                    "text": "Brinjal"
+                  }
+                }
+              },
+              {
+                "label": "Spinach",
+                "value": {
+                  "input": {
+                    "text": "Spinach"
+                  }
+                }
+              },
+              {
+                "label": "Cabbage",
+                "value": {
+                  "input": {
+                    "text": "Cabbage"
+                  }
+                }
+              }
+            ],
+            "description": "for the day",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_9_1602844212212",
+      "conditions": "@Enquiry:(fresh vegitables)",
+      "dialog_node": "response_4_1602845746875",
+      "previous_sibling": "response_5_1602845398587"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 50 per Kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602846865003",
+      "conditions": "@FreshVegitables:Brinjal",
+      "dialog_node": "response_4_1602847057291",
+      "previous_sibling": "response_9_1602846999820"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602842188921",
+      "conditions": "@Greetings:(Good Morning)",
+      "dialog_node": "response_5_1602842594012"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602842188921",
+      "conditions": "@Greetings:(Good Afternoon)",
+      "dialog_node": "response_5_1602842688447",
+      "previous_sibling": "response_5_1602842594012"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "we have 10 % discount on milk and dairy products"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "we have 20 % discount on fresh vegetables"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1602844212212",
+      "conditions": "@Enquiry:offers",
+      "dialog_node": "response_5_1602845398587",
+      "previous_sibling": "response_1_1602844349363"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602842188921",
+      "conditions": "anything_else",
+      "dialog_node": "response_6_1602842868373",
+      "previous_sibling": "response_1_1602842751859"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602842188921",
+      "conditions": "@Greetings:(Good Evening)",
+      "dialog_node": "response_9_1602842724660",
+      "previous_sibling": "response_5_1602842688447"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "it is Rs60 per Kg "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602846865003",
+      "conditions": "@FreshVegitables:cauliflower",
+      "dialog_node": "response_9_1602846999820"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602847972177",
+      "variable": "$number",
+      "dialog_node": "slot_2_1602849282115",
+      "previous_sibling": "slot_8_1602848357230"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602847972177",
+      "variable": "$EssentialProducts",
+      "dialog_node": "slot_8_1602848357230",
+      "previous_sibling": "handler_1_1602848356267"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602847972177",
+      "variable": "$payment",
+      "dialog_node": "slot_8_1602849358934",
+      "previous_sibling": "slot_2_1602849282115"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. I am essential shopping bot capable of showing list of essential products , their prices, find offers, place orders  How may I help you? can you please give me your name and mail id."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
